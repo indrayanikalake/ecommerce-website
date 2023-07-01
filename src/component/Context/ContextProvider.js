@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { commerce } from "../../lib/commerce";
 import { Context } from "./Context";
 
-export const ContextProvider = ({ children }) =>{
+const ContextProvider = ({ children }) =>{
 const [products, setProducts] = useState([]);
 const [cart, setCart] = useState({});
 
@@ -16,8 +16,8 @@ const fetchCart = async () =>{
 }
 
 const handleOnAddCart = async (productId, quantity) =>{
-    const item = await commerce.cart.add(productId, quantity);
-    setCart(item.cart);
+    const {cart} = await commerce.cart.add(productId, quantity);
+    setCart(cart);
   }
 
 useEffect(() =>{
@@ -32,3 +32,5 @@ useEffect(() =>{
     </Context.Provider>
  )
 }
+
+export default ContextProvider

@@ -6,16 +6,17 @@ export default makeStyles((theme) => ({
     flexGrow:'1',
     margin: '0 5rem',
     background:'white',
-    padding: theme.spacing(0,5),
+    padding: theme.spacing(0),
     width:'80%'
   },
   title: {
   
-    margin:'2rem 35rem',
+    margin:'2rem 0',
     letterSpacing:'0.2',
     background:'white',
     textAlign:'center',
-    width:'50%'
+    width:'50%',
+    
   },
   cartItems: {
     display:'flex',

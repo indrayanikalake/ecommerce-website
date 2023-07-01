@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Badge, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 import useStyles from './styles';
@@ -17,15 +17,21 @@ const NavNar = () => {
    <>
    <AppBar position='fixed' className={classes.appBar}>
      <Toolbar>
-        <Typography  variant='h6' className={classes.title} color='inherit'>
+        <div className={classes.heading}>
+        <Typography component={NavLink} to='/'  variant='h6' className={classes.title} color='inherit'>
           Home 
-          Menu 
-          Contact
         </Typography>
+        <Typography component={NavLink} to='/about' variant='h6' className={classes.title} color='inherit'>
+          About 
+        </Typography>
+        <Typography component={NavLink} to='/about' variant='h6' className={classes.title} color='inherit'>
+          contact
+        </Typography>
+        </div>
         <div className={classes.grow}/>
        
         <div className={classes.button} >
-            <IconButton component={Link} to='/cart' aria-label='Show Cart Items' color='inherit'>
+            <IconButton component={NavLink} to='/cart' aria-label='Show Cart Items' color='inherit'>
                 <Badge badgeContent={ cart.total_items} color='secondary'>
                     <ShoppingCart />
                 </Badge>

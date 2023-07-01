@@ -13,6 +13,12 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
+  heading: {
+    display:'flex',
+    alignItems:'space-between',
+    flexDirection:'row',
+    margin:'0 -5rem'
+  },
   title: {
     flexGrow: 1,
     letterSpacing:'0.04em',

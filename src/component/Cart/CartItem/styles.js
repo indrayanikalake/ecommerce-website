@@ -1,12 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
+main: {
+    display: 'flex',
+    alignItems: 'space-between',
+    flexDirection: 'row',
+    
+},
  media: {
-    height: '100%',
+    height: '20vh',
+    paddingTop: '60.25%', 
  },
   cart: {
-    height:'100%',
     margin:'0.5rem 0.5rem',
     borderBottom:'2px solid black'
   },
@@ -21,4 +27,10 @@ export default makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
   },
+  description: {
+    display: 'flex',
+   alignItems: 'space-between',
+    flexDirection: 'column',
+    margin: '5rem 0.5rem',
+  }
 }));

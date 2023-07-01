@@ -5,7 +5,9 @@ import men from './men.jpeg';
 import women from './women.jpeg';
 import accesories from './accessories.jpeg';
 import mobiles from './mobiles.jpeg';
-
+import about from './aboutshopping.jpeg';
+import story from './info.jpg';
+import mission from './ourMission.jpg'
 export{
     clothes,
     laptop,
@@ -13,5 +15,8 @@ export{
     men,
     women,
     accesories,
-    mobiles
+    mobiles,
+    about,
+    story,
+    mission
 }

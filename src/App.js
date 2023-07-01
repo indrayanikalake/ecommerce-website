@@ -1,8 +1,8 @@
 import React from "react";
-import { NavBar, Home, Cart} from "./component";
+import { NavBar, Home, Cart, ContextProvider, } from "./component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import { ContextProvider } from '../../ecommerce-website/src/component/Context/ContextProvider'
+import About from "./component/About/About";
 
 const App = () => {
    
@@ -10,13 +10,14 @@ const App = () => {
   return (
     <Router>
     <ContextProvider>
-   <div>
+  
     <NavBar />
     <Routes>
         <Route exact path="/" element={  <Home /> }></Route>
         <Route exact path="/cart" element={ <Cart  /> }></Route>
+        <Route exact path="/about" element={<About />}></Route>
     </Routes>
-   </div>
+  
    </ContextProvider>
    </Router>
   )
