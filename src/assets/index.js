@@ -7,7 +7,9 @@ import accesories from './accessories.jpeg';
 import mobiles from './mobiles.jpeg';
 import about from './aboutshopping.jpeg';
 import story from './info.jpg';
-import mission from './ourMission.jpg'
+import mission from './ourMission.jpg';
+import show from './show.mp4';
+import concerts from './liveconcerts.mp4';
 export{
     clothes,
     laptop,
@@ -18,5 +20,7 @@ export{
     mobiles,
     about,
     story,
-    mission
+    mission,
+    show,
+    concerts
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './card.css';
-import { clothes, cosmetics, laptop } from '../../../assets';
+import { clothes, cosmetics, laptop, show } from '../../../assets';
 
 
 
@@ -38,6 +38,14 @@ const Cardc = () => {
   return (
    
     <div id="slider">
+      <div className="slides">
+         <video src={ show }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
+         <div className='slides_overlay'>
+           <h4 className='headtext__cormorant'>The Generics</h4>
+           <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>Get our latest Album</p>
+           <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+        </div>
+    </div>
        <div className="slides">
          <video src={ clothes }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
          <div className='slides_overlay'>
@@ -87,6 +95,7 @@ const Cardc = () => {
 
       
     <div id="dots">
+        <span className="dot"></span>
         <span className="dot"></span>
         <span className="dot"></span>
         <span className="dot"></span>

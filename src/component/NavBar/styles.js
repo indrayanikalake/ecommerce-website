@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     boxShadow: 'none',
     background:'black',
     color:'white',
-   
+    height:'8vh',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
