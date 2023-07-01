@@ -1,36 +1,23 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { NavBar, Home, Cart} from "./component";
-import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import { ContextProvider } from '../../ecommerce-website/src/component/Context/ContextProvider'
 
 const App = () => {
-    const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
-
-    const fetchProducts = async () =>{
-        const { data } = await commerce.products.list();
-        setProducts(data);
-    };
-
-    const fetchCart = async () =>{
-        setCart( await commerce.products.retrieve());
-    };
-
-    useEffect(()=>{
-       fetchProducts();
-      
-    },[]);
+   
 
   return (
     <Router>
+    <ContextProvider>
    <div>
     <NavBar />
     <Routes>
-        <Route exact path="/" element={  <Home products={products}/> }></Route>
-        <Route exact path="/cart" element={ <Cart products={products} /> }></Route>
+        <Route exact path="/" element={  <Home /> }></Route>
+        <Route exact path="/cart" element={ <Cart  /> }></Route>
     </Routes>
    </div>
+   </ContextProvider>
    </Router>
   )
 }

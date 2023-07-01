@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 
 import useStyles from './styles';
+import { useContext } from 'react';
+import { Context } from '../Context/Context';
 
 const NavNar = () => {
     const classes=useStyles();
+    const { cart } = useContext(Context);
  
 
   return (
@@ -23,7 +26,7 @@ const NavNar = () => {
        
         <div className={classes.button} >
             <IconButton component={Link} to='/cart' aria-label='Show Cart Items' color='inherit'>
-                <Badge badgeContent='0' color='secondary'>
+                <Badge badgeContent={ cart.total_items} color='secondary'>
                     <ShoppingCart />
                 </Badge>
             </IconButton>
