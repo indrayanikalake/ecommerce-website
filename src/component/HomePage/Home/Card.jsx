@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './card.css';
 import { clothes, cosmetics, laptop, show } from '../../../assets';
+import { NavLink } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
 
 
@@ -42,16 +44,16 @@ const Cardc = () => {
          <video src={ show }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
          <div className='slides_overlay'>
            <h4 className='headtext__cormorant'>The Generics</h4>
-           <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>Get our latest Album</p>
-           <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+           <p className='p__cormorant'>Get our latest Album</p>
+           <Button component={NavLink} to='/music' className='custom__button' style={{background:'#f5edd2'}}>Shop Now</Button>
         </div>
     </div>
        <div className="slides">
          <video src={ clothes }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
          <div className='slides_overlay'>
            <h4 className='headtext__cormorant'>New fashion Clothes</h4>
-           <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>New and Fresh arrival in store</p>
-           <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+           <p className='p__cormorant'>New and Fresh arrival in store</p>
+           <button className='custom__button'>Shop Now</button>
         </div>
     </div>
 
@@ -59,8 +61,8 @@ const Cardc = () => {
          <video src={ cosmetics }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
           <div className='slides_overlay'>
                <h4 className='headtext__cormorant'>Cosmetic Products</h4>
-               <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>Get top Makeup Brands</p>
-               <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+               <p className='p__cormorant'>Get top Makeup Brands</p>
+               <button className='custom__button' >Shop Now</button>
           </div>
       </div>
 
@@ -68,8 +70,8 @@ const Cardc = () => {
         <video src={laptop} type='video/mp4' autoPlay={true} loop muted width="100%" height='80%' />
         <div className='slides_overlay'>
           <h4 className='headtext__cormorant'>Latest Laptops</h4>
-          <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>Get latest vesions with discounts</p>
-          <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+          <p className='p__cormorant'>Get latest vesions with discounts</p>
+          <button className='custom__button' >Shop Now</button>
          </div>
       </div>
 
@@ -78,8 +80,8 @@ const Cardc = () => {
          alt='music' width="100%" />
         <div className='slides_overlay'>
           <h4 className='headtext__cormorant'>Music Albums</h4>
-          <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>New and Fresh songs in store</p>
-          <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+          <p className='p__cormorant'>New and Fresh songs in store</p>
+          <button className='custom__button' >Shop Now</button>
          </div>
       </div>
 
@@ -88,8 +90,8 @@ const Cardc = () => {
        alt='waterPannel' width="100%" />
        <div className='slides_overlay'>
           <h4 className='headtext__cormorant'>Water Pannel Wall</h4>
-          <p className='p__cormorant'style={{marginTop:'8rem', marginLeft:'-24rem'}}>Get best of the best</p>
-          <button className='custom__button' style={{marginTop:'12rem', marginLeft:'-16rem'}}>Shop Now</button>
+          <p className='p__cormorant'>Get best of the best</p>
+          <button className='custom__button' >Shop Now</button>
          </div>
       </div>
 

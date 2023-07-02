@@ -8,7 +8,7 @@ import { Context } from '../Context/Context';
 
 const Cart = () => {
     const classes=useStyles();
-    const { cart } = useContext(Context);
+    const { cart, isLoading } = useContext(Context);
 
     const EmptyCart=()=>(
         <Typography variant='h4'>You have no items in your cart
@@ -41,7 +41,9 @@ const Cart = () => {
    <Container>
     <div className={classes.toolbar} />
      <Typography className={classes.title} variant='h3' gutterBottom>Your Cart</Typography>
-     {!cart.line_items? <EmptyCart /> : <FilledCart />}
+     {!isLoading && cart.line_items && <FilledCart />}
+     {!cart.line_items && <EmptyCart />}
+     {isLoading && <p>Loading...</p>}
    </Container>
   )
 }

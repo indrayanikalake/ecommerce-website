@@ -53,6 +53,7 @@ width:97%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   
   img{
@@ -84,9 +85,7 @@ width:97%;
       height: 100%;
    
     }
-    .slides_overlay{
-      display: none;
-    }
+    
   }
   
   #heading{
