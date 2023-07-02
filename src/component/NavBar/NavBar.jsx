@@ -31,11 +31,13 @@ const NavNar = () => {
         <div className={classes.grow}/>
        
         <div className={classes.button} >
+            
             <IconButton component={NavLink} to='/cart' aria-label='Show Cart Items' color='inherit'>
                 <Badge badgeContent={ cart.total_items} color='secondary'>
                     <ShoppingCart />
                 </Badge>
             </IconButton>
+           
         </div>
         
      </Toolbar>
