@@ -3,6 +3,7 @@ import { NavBar, Home, Cart, ContextProvider, Generics, } from "./component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import About from "./component/About/About";
+import Footer from "./component/Footer/Footer";
 
 const App = () => {
 
@@ -17,7 +18,7 @@ const App = () => {
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/music" element={<Generics />}></Route>
     </Routes>
-  
+    <Footer />
    </ContextProvider>
    </Router>
   )
