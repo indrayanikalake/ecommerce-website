@@ -24,7 +24,7 @@ const NavNar = () => {
         <Typography component={NavLink} to='/about' variant='h6' className={classes.title} color='inherit'>
           About 
         </Typography>
-        <Typography component={NavLink} to='/about' variant='h6' className={classes.title} color='inherit'>
+        <Typography component={NavLink} to='/contact' variant='h6' className={classes.title} color='inherit'>
           contact
         </Typography>
         </div>

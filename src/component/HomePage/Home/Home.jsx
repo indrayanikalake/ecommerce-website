@@ -6,6 +6,7 @@ import useStyles from './styles';
 import Cards from '../Crads/Cards';
 import { useContext } from 'react';
 import { Context } from '../../Context/Context';
+import Footer from '../../Footer/Footer';
 
 const Home = () => {
   const classes = useStyles();
@@ -28,6 +29,7 @@ const Home = () => {
           </Grid>
 
         </main>
+        <Footer />
     </div>
     
   )

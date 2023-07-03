@@ -10,6 +10,8 @@ import story from './info.jpg';
 import mission from './ourMission.jpg';
 import show from './show.mp4';
 import concerts from './liveconcerts.mp4';
+import contact from './location.jpeg'
+
 export{
     clothes,
     laptop,
@@ -22,5 +24,6 @@ export{
     story,
     mission,
     show,
-    concerts
+    concerts,
+    contact
 }
