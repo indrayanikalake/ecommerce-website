@@ -40,6 +40,21 @@ const handleOnAddCart = async (productId, quantity) =>{
         setError(error);
     }
   }
+
+  const handleUpdateCartQty = async (itemId,quantity) =>{
+    const { cart } = await commerce.cart.update(itemId, { quantity });
+    setCart(cart);
+  }
+
+  const handleRemoveFromCart =async (itemId) =>{
+    const { cart } = await commerce.cart.remove(itemId);
+    setCart(cart);
+  }
+
+  const handleEmptyCart = async () =>{
+    const {cart } = await commerce.cart.empty();
+    setCart(cart);
+  }
   
 
 useEffect(() =>{
@@ -50,10 +65,11 @@ useEffect(() =>{
 if(isLoading )return <p>Loading...</p>
 if(cart === undefined) return fetchCart();
  return (
-    <Context.Provider value={{products, cart, handleOnAddCart, isLoading, error}}>
+    <Context.Provider value={{products, cart, handleOnAddCart, isLoading, error, handleUpdateCartQty, 
+    handleRemoveFromCart, handleEmptyCart}}>
         {children}
     </Context.Provider>
  )
 }
 
-export default ContextProvider
+export default ContextProvider;

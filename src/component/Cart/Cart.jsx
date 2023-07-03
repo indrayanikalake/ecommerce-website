@@ -8,7 +8,7 @@ import { Context } from '../Context/Context';
 
 const Cart = () => {
     const classes=useStyles();
-    const { cart, isLoading, error } = useContext(Context);
+    const { cart, isLoading, error, handleEmptyCart } = useContext(Context);
 
     const EmptyCart=()=>(
         <Typography variant='h4'>You have no items in your cart
@@ -29,7 +29,7 @@ const Cart = () => {
             <Typography variant='h4'> Subtotal:{cart.subtotal.formatted_with_symbol}</Typography> 
             <div>
                 <Button className={classes.emptyButton} size='large' type='button' variant='contained'
-                color='secondary' >Empty Cart</Button>
+                color='secondary' onClick={handleEmptyCart}>Empty Cart</Button>
                 <Button component={Link} to='/checkout' className={classes.checkoutButton} size='large' type='button' variant='contained'
                 color='primary'>Checkout</Button>
             </div>

@@ -24,7 +24,7 @@ const Footer = () => {
             <Typography variant='body4'>Terms and Conditions</Typography>
             <Typography variant='body4'>Privacy Policy</Typography>
         </Card>
-        <Card className={classes.subContent}>
+        <Card className={classes.subContent} >
             <Typography variant='h4'style={{color:'white'}}>Information</Typography>
             <Typography variant='body4'>Payment Methods</Typography>
             <Typography variant='body4'>Times and Shipping Costs</Typography>

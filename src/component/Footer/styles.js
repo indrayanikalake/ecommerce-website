@@ -28,8 +28,8 @@ export default makeStyles((theme) => ({
   },
   subContent: {
     display: 'flex',
-    alignItems: 'center',
-    
+    alignItems: 'space-between',
+    textAlign:'center',
     flexDirection: 'column',
    
     height:'50vh',
