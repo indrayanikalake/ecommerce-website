@@ -18,13 +18,13 @@ const NavNar = () => {
    <AppBar position='fixed' className={classes.appBar}>
      <Toolbar>
         <div className={classes.heading}>
-        <Typography component={NavLink} to='/'  variant='h6' className={classes.title} color='inherit'>
+        <Typography component={NavLink} to='/'  variant='h4' className={classes.title} color='inherit'>
           Home 
         </Typography>
-        <Typography component={NavLink} to='/about' variant='h6' className={classes.title} color='inherit'>
+        <Typography component={NavLink} to='/about' variant='h4' className={classes.title} color='inherit'>
           About 
         </Typography>
-        <Typography component={NavLink} to='/contact' variant='h6' className={classes.title} color='inherit'>
+        <Typography component={NavLink} to='/contact' variant='h4' className={classes.title} color='inherit'>
           contact
         </Typography>
         </div>

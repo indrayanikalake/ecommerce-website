@@ -2,6 +2,7 @@ import { Grid, Card, CardMedia, Typography, Button } from '@material-ui/core';
 import React from 'react';
 import {men, women, accesories, mobiles} from '../../../assets';
 import useStyles from './styles';
+import { Link } from 'react-router-dom';
 
 const products= [
 { id: '1', title: 'Men', img: men },
@@ -25,7 +26,7 @@ const Cards = () => {
                      <Typography variant="h4" className={classes.headtext}>
                         {product.title}
                     </Typography>
-                    <Button variant="contained" className={classes.button}>
+                    <Button component={Link} to={`/${product.title}`} variant="contained" className={classes.button}>
                       Shop Now
                     </Button>
                     </div>

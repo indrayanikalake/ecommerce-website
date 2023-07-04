@@ -8,7 +8,7 @@ export default makeStyles(()=>({
         margin:'0.5rem 0.5rem'
     },
     media: {
-        height: '20vh',
+        height: '30vh',
         paddingTop: '60.25%', 
       },
     cardContent:{

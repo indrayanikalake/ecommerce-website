@@ -2,11 +2,13 @@ import { makeStyles} from '@material-ui/core/styles';
 import { contact } from '../../assets';
 
 export default makeStyles((theme) =>({
+   
     main: {
         backgroundImage:`url(${contact})`,
         backgroundSize: 'cover',
         height:'100vh',
-        marginTop:theme.spacing(7),
+        marginTop:theme.spacing(1),
+        padding:theme.spacing(10),
     },
     form: {
         textAlign:'center',

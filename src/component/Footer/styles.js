@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
   main: {
     backgroundColor: 'black',
     width: '100%',
-    height: '85vh',
+    height: '75vh',
     marginTop: theme.spacing(15),
     background:'black',
     [theme.breakpoints.up('sm')]: {
@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
   },
   mainContent: {
     display: 'flex',
-    alignItems: 'flex',
+    alignItems: 'space-between',
     textAlign: 'center',
     flexDirection: 'row',
     margin:theme.spacing(0,-72),
@@ -28,8 +28,7 @@ export default makeStyles((theme) => ({
   },
   subContent: {
     display: 'flex',
-    alignItems: 'space-between',
-    textAlign:'center',
+    alignItems: 'space-between', 
     flexDirection: 'column',
    
     height:'50vh',

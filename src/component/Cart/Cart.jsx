@@ -41,7 +41,7 @@ const Cart = () => {
    <Container>
     <div className={classes.toolbar} />
      <Typography className={classes.title} variant='h3' gutterBottom>Your Cart</Typography>
-     {!isLoading && !error && (cart.line_items ? <FilledCart /> : <EmptyCart />)}
+     {!isLoading && !error && (cart.line_items.length!==0 ? <FilledCart /> : <EmptyCart />)}
       {error && ( 
       <>
       <Typography variant='h6'>Something went wrong.....Retrying</Typography>

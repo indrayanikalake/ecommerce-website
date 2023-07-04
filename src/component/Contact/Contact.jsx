@@ -26,6 +26,7 @@ const Contact = () => {
 
   return (
     <div className={classes.main}>
+       
     <form className={classes.form} onSubmit={handleSubmit}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
@@ -69,7 +70,7 @@ const Contact = () => {
             fullWidth
             label="Message"
             multiline
-            rows={3}
+            rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={classes.textField}
