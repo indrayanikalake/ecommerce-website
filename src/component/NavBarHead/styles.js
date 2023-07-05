@@ -5,10 +5,9 @@ const drawerWidth = 0;
 export default makeStyles((theme) => ({
   appBar: {
     boxShadow: 'none',
-    background:'black',
+    background:'white',
     color:'white',
-    height:'8vh',
-    margin:theme.spacing(5),
+    height:'9vh',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -18,8 +17,7 @@ export default makeStyles((theme) => ({
     display:'flex',
     alignItems:'space-between',
     flexDirection:'row',
-    margin:'6rem ',
-    backgroundColor:'black',
+    margin:'0 -5rem'
   },
   title: {
     flexGrow: 1,
@@ -27,14 +25,12 @@ export default makeStyles((theme) => ({
     alignItems: 'space-between',
     display: 'flex',
     textDecoration: 'none',
-    marginLeft:'6rem',
-    color:'white',
+    marginLeft:'5rem',
+    color:'black',
   },
  
   menuButton: {
-    marginRight: theme.spacing(10),
-    background:'balck',
-    color:'white',
+    marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
@@ -49,7 +45,7 @@ export default makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    marginRight: theme.spacing(0),
+    marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {

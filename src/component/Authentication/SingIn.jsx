@@ -1,20 +1,22 @@
-import React,{useState,useRef,useContext} from 'react'
-import classes from './SignUp.module.css'
-import { useHistory } from 'react-router-dom';
-import AuthContext from '../../../store/authContext/AuthContext';
-import LoaderEl from '../../Loader/Loader';
+import React,{useState,useRef, useContext} from 'react';
+import classes from './SignUp.module.css';
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../Context/AuthContext';
+
+
 
 function SignIn() {
+    const navigate = useNavigate();
     const [isLogin, setIsLogin] = useState(true);
-    const [isLoading, setIsLoading] = useState(false)
-    const [error,setError] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [error,setError] = useState(false);
     const enteredEmail = useRef();
     const enteredPassword = useRef();
-    const history = useHistory()
     const switchAuthModeHandler = () => {
         setIsLogin((prevState) => !prevState);
       };
-      const {updateTheToken} = useContext(AuthContext)
+      const { updateToken } = useContext(AuthContext);
+    
       const submitHandler = async(e)=>{
         e.preventDefault()
         setError(false)
@@ -26,7 +28,7 @@ function SignIn() {
           try{
     
             setIsLoading(true)
-            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key= pk_52996542e79682c6d98d1b50a285d77b794bc150f5315',{
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDz2JJcOPvQ6aZWZ7JSkBxM2wuUziGzq80',{
               method:'POST',
               body:JSON.stringify({
                 email,
@@ -39,17 +41,17 @@ function SignIn() {
             })
             setIsLoading(false)
            if(response.ok){
-            history.replace('/')
+           navigate('/');
 
            }else{
-            setError(true)
+           setError(true);
             return;
            }
 
            const data = await response.json()
            console.log(data)
            localStorage.setItem('token',data.idToken)
-           updateTheToken(data.idToken)
+           updateToken(data.idToken);
 
           }catch(err){
             console.log(err)
@@ -60,7 +62,7 @@ function SignIn() {
           try{
            
             setIsLoading(true)
-            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key= pk_52996542e79682c6d98d1b50a285d77b794bc150f5315',{
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDz2JJcOPvQ6aZWZ7JSkBxM2wuUziGzq80',{
               method:'POST',
               body:JSON.stringify({
                 email,
@@ -85,7 +87,7 @@ function SignIn() {
         }
       }
   return (
-    <div> {isLoading && <LoaderEl/>}
+    <div> {isLoading && <p>Loading...</p>}
     <section className={classes.auth}>
 
     <h1>{isLogin ? "Login" : "Sign Up"}</h1>

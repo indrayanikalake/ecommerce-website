@@ -1,17 +1,22 @@
 import React from "react";
-import { NavBar, Home, Cart, ContextProvider, Generics,  Contact, MenProduct, Women, Accessories, Mobile, ProductDetails, SingIn, } from "./component";
+import { NavBar, Home, Cart, ContextProvider, Generics,  Contact, MenProduct, Women, Accessories, Mobile, ProductDetails, SingIn, AuthCOntextProvider, NavBarHead, } from "./component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import About from "./component/About/About";
+
 
 
 const App = () => {
 
   return (
     <Router>
+
+    <AuthCOntextProvider>
     <ContextProvider>
-  
+    <NavBarHead />
     <NavBar />
+  
+   
     <Routes>
         <Route exact path="/" element={  <Home /> }></Route>
         <Route exact path="/cart" element={ <Cart  /> }></Route>
@@ -27,6 +32,7 @@ const App = () => {
     </Routes>
    
    </ContextProvider>
+   </AuthCOntextProvider>
    </Router>
   )
 }

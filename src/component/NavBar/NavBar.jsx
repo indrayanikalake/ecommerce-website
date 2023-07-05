@@ -15,9 +15,9 @@ const NavNar = () => {
 
   return (
    <>
-   <AppBar position='fixed' className={classes.appBar}>
-     <Toolbar>
-        <div className={classes.heading}>
+   <div  className={classes.appBar}>
+     <Toolbar >
+        <AppBar className={classes.heading}>
         <Typography component={NavLink} to='/'  variant='h4' className={classes.title} color='inherit'>
           Home 
         </Typography>
@@ -27,7 +27,7 @@ const NavNar = () => {
         <Typography component={NavLink} to='/contact' variant='h4' className={classes.title} color='inherit'>
           contact
         </Typography>
-        </div>
+        </AppBar>
         <div className={classes.grow}/>
        
         <div className={classes.button} >
@@ -41,7 +41,7 @@ const NavNar = () => {
         </div>
         
      </Toolbar>
-   </AppBar>
+   </div>
    </>
   )
 }
