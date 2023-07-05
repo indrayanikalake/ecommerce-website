@@ -16,6 +16,7 @@ const Cards = () => {
 
   return (
     <main className={classes.content}>
+      <h4 className='headtext__cormorant' style={{textAlign:'center'}}>CATEGORY</h4>
         <div className={classes.toolbar}/>
         <Grid container justifyContent='center' spacing={4} gutterBottom>
             {products.map((product) =>(

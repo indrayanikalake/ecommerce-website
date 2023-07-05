@@ -40,14 +40,7 @@ const Cardc = () => {
   return (
    
     <div id="slider">
-      <div className="slides">
-         <video src={ show }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
-         <div className='slides_overlay'>
-           <h4 className='headtext__cormorant'>The Generics</h4>
-           <p className='p__cormorant'>Get our latest Album</p>
-           <Button component={NavLink} to='/music' className='custom__button' style={{background:'#f5edd2'}}>Shop Now</Button>
-        </div>
-    </div>
+      
        <div className="slides">
          <video src={ clothes }  type='video/mp4' autoPlay={true} loop muted width='100%'/>
          <div className='slides_overlay'>

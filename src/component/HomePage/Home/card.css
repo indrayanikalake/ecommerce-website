@@ -1,9 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    
-  }
+
   @keyframes fade{
     from{
       opacity:0.9;
@@ -14,13 +9,14 @@
   }
   
   body{
+   
     background:whitesmoke;
   }
   
   #slider{
-    margin:3rem auto;
+    margin:-4rem 0;
     width:100%;
-    height: 90vh;
+    height: 100vh;
     overflow:hidden;
     border-top: 20px solid rgb(242, 251, 156);
     border-left: 20px solid rgb(242, 251, 156);
@@ -46,6 +42,7 @@ width:97%;
 
   .slides_overlay{
     width: 100%;
+    height: 100vh;
     position: absolute;
     inset: 0;
     background: rgba(14, 14, 14, 0.6);

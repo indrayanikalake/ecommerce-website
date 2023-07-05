@@ -91,7 +91,7 @@ const ProductDetails = () => {
                     </h5>
                     <div class="action">
                         <button class="add-to-cart btn btn-default" type="button" onClick={()=>handleOnAddCart(product.id,1)}
-                        style={{background:'black',color:'white'}}>add to cart</button>
+                        style={{color:'white', background:'black'}}>add to cart</button>
                         <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
                     </div>
                 </div>

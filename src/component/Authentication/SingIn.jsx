@@ -41,7 +41,7 @@ function SignIn() {
             })
             setIsLoading(false)
            if(response.ok){
-           navigate('/');
+           navigate('/store');
 
            }else{
            setError(true);

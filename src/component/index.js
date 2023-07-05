@@ -1,5 +1,6 @@
 export  {default as NavBar}  from "./NavBar/NavBar";
 export  {default as Home}  from "./HomePage/Home/Home";
+export { default as Store } from "./HomePage/Home/Store";
 export  { default as Cart }  from "./Cart/Cart";
 export {default as ContextProvider } from "./Context/ContextProvider";
 export { default as Generics } from "./Generics/Generics";
@@ -12,3 +13,4 @@ export { default as ProductDetails } from "./ProductDetails/ProductDetails";
 export { default as SingIn } from "./Authentication/SingIn";
 export { default as AuthCOntextProvider } from "./Context/AuthCOntextProvider";
 export { default as NavBarHead } from "./NavBarHead/NavBarHead";
+export { default as ProfileForm } from "./Authentication/ProfileForm";

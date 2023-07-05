@@ -31,12 +31,20 @@ const NavBarHead = () => {
             </IconButton>
            )}
            {isLoggedIn &&(
+             <div className={classes.heading}>
+            <IconButton aria-label='Show Cart Items' color='inherit'>
+            <Typography  component={NavLink} to='/profile' onClick={logoutHandler} variant='h4' className={classes.title} color='inherit'>
+                Profile
+            </Typography>
+            
+            </IconButton>
             <IconButton aria-label='Show Cart Items' color='inherit'>
             <Typography  component={NavLink} to='/' onClick={logoutHandler} variant='h4' className={classes.title} color='inherit'>
                 Sing Out
             </Typography>
             
             </IconButton>
+            </div>
         
         )}
         </div>
