@@ -8,9 +8,9 @@ const AuthCOntextProvider = ({ children }) => {
     const [token, setToken] = useState(initialToken);
     const navigate = useNavigate();
 
-    const updateToken = (token) =>{
-        setToken(token);
-        localStorage.setItem('token',token);
+    const updateToken = (newToken) =>{
+        setToken(newToken);
+        localStorage.setItem('token',newToken);
         resetTokenExpiration();
     }
 
@@ -41,13 +41,22 @@ const AuthCOntextProvider = ({ children }) => {
     useEffect(() => {
         const tokenExpiration = localStorage.getItem('tokenExpiration');
         const currentTime = Date.now();
-    
-        if (tokenExpiration && currentTime >= +tokenExpiration) {
+      
+        const handleLogout = () => {
           logoutHandler();
-        } else {
+        };
+      
+        const handleResetExpiration = () => {
           resetTokenExpiration();
+        };
+      
+        if (tokenExpiration && currentTime >= +tokenExpiration) {
+          handleLogout();
+        } else {
+          handleResetExpiration();
         }
-      }, [logoutHandler,resetTokenExpiration]);
+      }, [logoutHandler, resetTokenExpiration]);
+      
 
   return (
    <AuthContext.Provider value={{ token, updateToken, isLoggedIn, logoutHandler }}>
