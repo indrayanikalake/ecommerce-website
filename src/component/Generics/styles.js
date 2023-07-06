@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
     slides: {
         width:'100%',
         height:'100vh',
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(-5),
         marginLeft: theme.spacing(2),
         
     },
