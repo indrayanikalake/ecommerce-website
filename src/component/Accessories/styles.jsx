@@ -3,6 +3,7 @@ import { makeStyles} from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   content: {
+    margintop:theme.spacing(-15),
     flexGrow:'1',
     background:'rgb(240, 233, 240)',
     padding: theme.spacing(0,15),

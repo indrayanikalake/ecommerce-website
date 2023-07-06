@@ -4,9 +4,9 @@ import { makeStyles} from '@material-ui/core/styles';
 export default makeStyles((theme) =>({
    
     main: {
-    
+        position:'absolute',
         height:'100vh',
-        marginTop:theme.spacing(1),
+        marginTop:theme.spacing(-10),
         padding:theme.spacing(10),
     },
     form: {

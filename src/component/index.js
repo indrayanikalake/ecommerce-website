@@ -14,3 +14,4 @@ export { default as SingIn } from "./Authentication/SingIn";
 export { default as AuthCOntextProvider } from "./Context/AuthCOntextProvider";
 export { default as NavBarHead } from "./NavBarHead/NavBarHead";
 export { default as ProfileForm } from "./Authentication/ProfileForm";
+export {default as AuthContext } from "./Context/AuthContext";

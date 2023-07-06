@@ -33,7 +33,7 @@ export default makeStyles((theme) => ({
  
   menuButton: {
     marginRight: theme.spacing(10),
-    background:'balck',
+    
     color:'white',
     [theme.breakpoints.up('sm')]: {
       display: 'none',

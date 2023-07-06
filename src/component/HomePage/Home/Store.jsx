@@ -1,12 +1,11 @@
 import React from 'react';
-import Cardc from './Card';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 import useStyles from './styles';
 import Cards from '../Crads/Cards';
 import { useContext } from 'react';
 import { Context } from '../../Context/Context';
-import Footer from '../../Footer/Footer';
+
 
 const Store = () => {
   const classes = useStyles();

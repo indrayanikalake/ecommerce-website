@@ -11,7 +11,7 @@ export default makeStyles((theme) => ({
   root:{
     flexGrow:'1',
     maxWidth:'100%',
-    border:'5px solid gray',
+   
     margin:'1rem 0.5rem',
 },
 media: {

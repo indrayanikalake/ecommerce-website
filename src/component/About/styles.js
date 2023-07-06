@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
     color: 'white',
     borderTop: '15px solid pink',
     borderLeft: '15px solid pink',
-    marginTop: '4.2rem',
+    marginTop: '-4.2rem',
     position: 'sticky',
     top: 0,
     zIndex: 1,
@@ -34,8 +34,8 @@ export default makeStyles((theme) => ({
     height: '300px', // Set the desired height of the card media
   },
   story:{
-    marginTop:'-18rem ',
-    marginLeft: '33rem'
+    marginTop:'-25rem ',
+    marginLeft: '48rem'
   },
   mission:{
     marginTop:'4rem ',

@@ -25,7 +25,15 @@ const Contact = () => {
 
   return (
     <div className={classes.main}>
-       
+       <div className={classes.contact}>
+        <Typography variant='h2'>Contact</Typography>
+        <Typography variant='h4'>Address</Typography>
+        <Typography variant='body6'>Somcnvk xmncjsdk, dhfjsd ,dbsdjd,404334</Typography>
+        <Typography variant='h4'>Email Adress</Typography>
+        <Typography variant='body6'>info@gmail.com</Typography>
+        <Typography variant='h4'>Phone No</Typography>
+        <Typography variant='body6'>+91 4768464387</Typography>
+       </div>
     <form className={classes.form} onSubmit={handleSubmit}>
       <Grid container spacing={2}>
         <Grid item xs={12}>

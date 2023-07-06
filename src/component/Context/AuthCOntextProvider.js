@@ -4,19 +4,21 @@ import { useNavigate } from 'react-router-dom';
 
 
 const AuthCOntextProvider = ({ children }) => {
-    const [token, setToken] = useState(null);
+    const initialToken = localStorage.getItem('token')
+    const [token, setToken] = useState(initialToken);
     const navigate = useNavigate();
 
     const updateToken = (token) =>{
         setToken(token);
+        localStorage.setItem('token',token);
     }
 
     const isLoggedIn = token === null? false : true;
 
     const logoutHandler = () =>{
         setToken(null);
-        navigate('/signIn');
-        localStorage.removeItem(token);
+        
+        localStorage.removeItem('token');
     }
   return (
    <AuthContext.Provider value={{ token, updateToken, isLoggedIn, logoutHandler }}>
