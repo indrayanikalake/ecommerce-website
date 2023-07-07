@@ -6,7 +6,7 @@ import './ProductDetails.css';
 import { Context } from '../Context/Context';
 
 const ProductDetails = () => {
-    const { handleOnAddCart } = useContext(Context);
+    const { handleOnAddCart, user } = useContext(Context);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -90,7 +90,7 @@ const ProductDetails = () => {
                         <span class="color blue"></span>
                     </h5>
                     <div class="action">
-                        <button class="add-to-cart btn btn-default" type="button" onClick={()=>handleOnAddCart(product.id,1)}
+                        <button class="add-to-cart btn btn-default" type="button" onClick={()=>handleOnAddCart( product.id, 1)}
                         style={{color:'white', background:'black'}}>add to cart</button>
                         <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
                     </div>

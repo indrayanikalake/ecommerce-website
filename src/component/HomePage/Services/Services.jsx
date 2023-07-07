@@ -24,7 +24,8 @@ const Services = () => {
   return (
     <div >
       
-      <h4 className='headtext__cormorant'style={{textAlign:'center', textTransform:'uppercase'}}>Our Service</h4>
+      <h4 className='headtext__cormorant'style={{textAlign:'center', textTransform:'uppercase'}}>Our Services
+      </h4>
       <Grid container jusifyContent='center' spacing={4} className={classes.tours}>
        
         {services.map((service, index) => (

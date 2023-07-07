@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   content: {
-    marginTop:theme.spacing(-5),
+    marginTop:theme.spacing(-6),
     flexGrow:'1',
     padding: theme.spacing(2),
   },
@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     maxWidth:'100%',
     borderRadius:'10px',
   
-    margin:'1rem 1rem'
+    margin:'-4rem 1rem'
 },
 media: {
     height: '60vh',
