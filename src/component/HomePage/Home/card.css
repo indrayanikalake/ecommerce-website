@@ -16,10 +16,10 @@
   #slider{
     margin:-4rem 0;
     width:100%;
-    height: 100vh;
+    height: 96vh;
     overflow:hidden;
-    border-top: 20px solid rgb(242, 251, 156);
-    border-left: 20px solid rgb(242, 251, 156);
+    border-top: 20px solid rgb(230, 212, 24);
+    border-left: 20px solid rgb(230, 212, 24);
     border-radius: 5%;
    
   }

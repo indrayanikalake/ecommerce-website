@@ -1,6 +1,6 @@
 import { Card, CardMedia, Typography,Grid } from '@material-ui/core';
 import React from 'react';
-import { story, mission } from '../../assets';
+import { story, indrayani } from '../../assets';
 import useStyles from './styles';
 
 const About = () => {
@@ -30,8 +30,8 @@ Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10
 Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula.
 
 Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</Typography>
-    <Card className={classes.root}>
-        <CardMedia className={classes.media} image={mission} alt='about mission'/>
+    <Card className={classes.rooot}>
+        <CardMedia className={classes.media}  image={indrayani} alt='about mission'/>
     </Card>
     
 </Grid>

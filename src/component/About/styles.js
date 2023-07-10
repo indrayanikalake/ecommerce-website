@@ -27,11 +27,23 @@ export default makeStyles((theme) => ({
     marginTop: '3rem',
   },
   root: {
+    borderRadius:'25px',
+    marginBottom:theme.spacing(4),
     width: '400px', // Set the desired width of the card
     marginLeft:'2.5rem'
   },
   media: {
-    height: '300px', // Set the desired height of the card media
+    height: '37vh', // Set the desired height of the card media
+   
+    
+  
+  },
+  rooot: {
+    borderRadius:'45%',
+    marginBottom:theme.spacing(4),
+    height:'40vh',
+    width: '400px', // Set the desired width of the card
+    marginLeft:'102.5rem'
   },
   story:{
     marginTop:'-25rem ',

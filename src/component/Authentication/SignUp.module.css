@@ -1,14 +1,34 @@
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+ 
+}
+
+.videoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
 .auth {
-    margin: 7.4rem auto;
+    margin: 10.4rem auto;
     width: 100%;
     height: 50vh;
     max-width: 50rem;
     border-radius: 6px;
-    background-color: #e4cbf5;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    backdrop-filter: blurr(100px);
+   
     padding: 1rem;
     text-align: center;
-    box-shadow: 5px 5px 5px rgb(227, 223, 227);
+    box-shadow: 5px 5px 5px rgb(238, 218, 238);
   }
 
   .auth h1 {

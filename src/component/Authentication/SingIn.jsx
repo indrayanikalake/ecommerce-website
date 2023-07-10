@@ -3,6 +3,7 @@ import classes from './SignUp.module.css';
 import { useNavigate } from 'react-router-dom';
 import { commerce } from '../../lib/commerce';
 import AuthContext from '../Context/AuthContext';
+import { loginbackgrnd } from '../../assets';
 
 function SignIn() {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ function SignIn() {
         const response = await commerce.customer.login(email,'http://localhost:3000/login/callback');
         setIsLoading(false);
         console.log(response);
+        console.log(commerce);
         if (response.success) {
           navigate('/store');
           updateToken(response.email);
@@ -66,7 +68,13 @@ function SignIn() {
   if(error) return <p>something went wrong</p>
 
   return (
-    <div>
+    <div className={classes.main}>
+      <div class={classes.videoBackground}>
+      <video  autoPlay loop muted>
+      <source src={loginbackgrnd} type="video/mp4" />
+                 
+      </video>
+  </div>
       {isLoading && <p>Loading...</p>}
       <section className={classes.auth}>
         <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>

@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import AuthContext from './AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { commerce } from '../../lib/commerce';
+import { Context } from './Context';
 
 const AuthContextProvider = ({ children }) => {
+  
   const initialToken = localStorage.getItem('token');
   const [token, setToken] = useState(initialToken);
   const navigate = useNavigate();
@@ -23,21 +25,27 @@ const AuthContextProvider = ({ children }) => {
     setTokenExpiration();
   }, [clearTokenExpiration, setTokenExpiration]);
 
-  const updateToken = useCallback((newToken) => {
+  const updateToken = useCallback(async (newToken) => {
     setToken(newToken);
     localStorage.setItem('token', newToken);
     resetTokenExpiration();
+
+   
   }, [resetTokenExpiration]);
 
   const isLoggedIn = !!token;
 
   const logoutHandler = useCallback(async () => {
+
     try {
       await commerce.customer.logout();
       localStorage.removeItem('token');
+      updateToken(null);
       setToken(null);
-      navigate('/signIn');
+       navigate('/signIn');
+     
       clearTokenExpiration();
+   
     } catch (err) {
       console.log(err);
     }

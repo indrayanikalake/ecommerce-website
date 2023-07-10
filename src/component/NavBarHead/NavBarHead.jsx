@@ -33,7 +33,7 @@ const NavBarHead = () => {
            {isLoggedIn &&(
              <div className={classes.heading}>
             <IconButton aria-label='Show Cart Items' color='inherit'>
-            <Typography  component={NavLink} to='/profile' onClick={logoutHandler} variant='h4' className={classes.title} color='inherit'>
+            <Typography  component={NavLink} to='/profile' variant='h4' lassName={classes.title} color='inherit'>
                 Profile
             </Typography>
             

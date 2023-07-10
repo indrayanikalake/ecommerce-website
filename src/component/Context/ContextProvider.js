@@ -1,13 +1,16 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import { commerce } from "../../lib/commerce";
 import { Context } from "./Context";
+import AuthContext from "./AuthContext";
 
 
 const ContextProvider = ({ children }) =>{
+  const { token } = useContext(AuthContext);
 const [products, setProducts] = useState([]);
 const [cart, setCart] = useState({ });
 const [isLoading, setIsLoading] = useState(false);
 const [error, setError] = useState(null);
+
 
 const fetchProducts = async () =>{
     setIsLoading(true);
@@ -23,6 +26,7 @@ const fetchProducts = async () =>{
 const fetchCart = async () =>{
     setIsLoading(true);
     try{
+    
     setCart(await commerce.cart.retrieve());
     setIsLoading(false);
     }catch (error){
@@ -56,16 +60,22 @@ const handleOnAddCart = async (productId, quantity) =>{
     setCart(cart);
   }
   
+  const refreshCart = async () =>{
+    const newCart = await commerce.cart.refresh();
+    setCart(newCart);
+  }
 
 useEffect(() =>{
     fetchProducts();
     fetchCart();
 },[]);
 
+
+
 if(isLoading )return <p>Loading...</p>
 if(cart === undefined) return fetchCart();
  return (
-    <Context.Provider value={{products, cart, handleOnAddCart, isLoading, error, handleUpdateCartQty, 
+    <Context.Provider value={{products, cart, refreshCart, handleOnAddCart, isLoading, error, handleUpdateCartQty, 
     handleRemoveFromCart, handleEmptyCart}}>
         {children}
     </Context.Provider>

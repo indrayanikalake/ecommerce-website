@@ -18,6 +18,8 @@ import clothesBrand from './cloths brand.jpeg';
 import electronics from './electronics brand.jpeg';
 import cosmeticsBrand from './cosmetics.jpeg';
 import music from './music.png';
+import indrayani from './indrayani.jpg';
+import loginbackgrnd from './login.mp4';
 
 export{
     clothes,
@@ -40,5 +42,6 @@ export{
     electronics,
     cosmeticsBrand,
     music,
-
+    indrayani,
+    loginbackgrnd
 }

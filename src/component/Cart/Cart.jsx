@@ -12,7 +12,7 @@ const Cart = () => {
 
     const EmptyCart=()=>(
         <Typography variant='h4'>You have no items in your cart
-        <Link to='/' className={classes.link}>Please add some</Link>
+        <Link to='/store' className={classes.link}>Please add some</Link>
         </Typography>
     );
 
